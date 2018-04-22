@@ -1,0 +1,10 @@
+{
+  "name": "serverless-blog",
+  "version": "1.0.0",
+  "scripts": {
+    "createTable": "sh dynamodb/createTable.sh"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.226.1"
+  }
+}

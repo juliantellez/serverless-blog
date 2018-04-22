@@ -1,0 +1,19 @@
+{   
+    "TableName": "BlogPosts", 
+    "AttributeDefinitions" : [
+        {
+            "AttributeName": "blogUuid",
+            "AttributeType": "S"
+        }
+    ],
+    "KeySchema": [
+        {
+            "KeyType": "HASH",
+            "AttributeName": "blogUuid"
+        }
+    ],
+    "ProvisionedThroughput": {
+        "WriteCapacityUnits": 1,
+        "ReadCapacityUnits": 1
+    }
+}
