@@ -36,14 +36,14 @@ resources:
 
 functions:
   createBlog:
-    handler: createBlog.handler
+    handler: src/functions/blog/create/createBlogHandler.createBlog
     events:
       - http:
           path: create
           method: post
           cors: true
   deleteBlog:
-    handler: deleteBlog.handler
+    handler: src/functions/blog/delete/deleteBlogHandler.deleteBlog
     events:
       - http:
           path: delete

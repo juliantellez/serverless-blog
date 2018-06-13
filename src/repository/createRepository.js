@@ -42,6 +42,6 @@ const repositoryFactory = db => {
 const createRepository = repositoryFactory.bind(null, new DocumentClient(dbConfig))
 
 module.exports = {
-    repositoryFactory,
+    createRepository,
     repositoryFactory,
 };
