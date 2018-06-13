@@ -2,9 +2,21 @@
   "name": "serverless-blog",
   "version": "1.0.0",
   "scripts": {
-    "createTable": "sh dynamodb/createTable.sh"
+    "test": "mocha --opts ./mocha.opts",
+    "createTable": "sh dynamodb/createTable.sh",
+    "test:watch": "npm run test -- --watch",
+    "deploy": "serverless deploy -v"
   },
   "dependencies": {
-    "aws-sdk": "^2.226.1"
+    "aws-sdk": "^2.226.1",
+    "uuid": "^3.2.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "serverless": "^1.26.1",
+    "serverless-dynamodb-local": "^0.2.28",
+    "serverless-offline": "^3.20.3",
+    "sinon": "^6.0.0"
   }
 }
