@@ -1,10 +1,10 @@
-'use strict';
+"use strict";
 
-const deleteBlogFunction = require('./deleteBlogFunction')
-const handleResponse = require('../../../utils/handleResponse')
+const deleteBlogFunction = require("./deleteBlogFunction");
+const handleResponse = require("../../../utils/handleResponse");
 
 const deleteBlogHandler = (event, context, callback) => {
-    deleteBlogFunction(event, handleResponse(callback))
-}
+  deleteBlogFunction(event, handleResponse(callback));
+};
 
-module.exports.deleteBlog = deleteBlogHandler
+module.exports.deleteBlog = deleteBlogHandler;
