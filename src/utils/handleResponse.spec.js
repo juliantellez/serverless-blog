@@ -1,6 +1,6 @@
 const chai = require('chai')
 
-const reportError = require('./reportError')
+const reportError = require('./handleResponse')
 
 describe('reportError', () => {
     it('should report error', () => {
