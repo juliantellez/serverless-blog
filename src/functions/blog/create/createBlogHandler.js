@@ -1,10 +1,17 @@
 'use strict';
 
+const {
+    createRepository,
+} = require('../../../repository/createRepository')
 const createBlogFunction = require('./createBlogFunction')
-const reportError = require('../../../utils/reportError')
+const handleResponse = require('../../../utils/handleResponse')
 
 const createBlogHanler = (event, context, callback) => {
-    createBlogFunction(event, reportError(callback))
+    createBlogFunction(
+        event, 
+        createRepository(),
+        handleResponse(callback), 
+    )
 }
 
 module.exports.createBlog = createBlogHanler
