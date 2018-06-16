@@ -9,8 +9,8 @@ describe("handleResponse", () => {
       const value = response;
       const expected = {
         headers: {
-            "Access-Control-Allow-Credentials": true,
-            "Access-Control-Allow-Origin": "*"
+          "Access-Control-Allow-Credentials": true,
+          "Access-Control-Allow-Origin": "*"
         },
         statusCode: 500,
         isBase64Encoded: false,
@@ -28,8 +28,8 @@ describe("handleResponse", () => {
       const value = response;
       const expected = {
         headers: {
-            "Access-Control-Allow-Credentials": true,
-            "Access-Control-Allow-Origin": "*"
+          "Access-Control-Allow-Credentials": true,
+          "Access-Control-Allow-Origin": "*"
         },
         statusCode: 200,
         isBase64Encoded: false,
