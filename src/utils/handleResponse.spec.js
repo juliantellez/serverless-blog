@@ -5,10 +5,13 @@ const reportError = require("./handleResponse");
 describe("handleResponse", () => {
   it("should report error", () => {
     const error = new Error("foo");
-    const cb = error => {
-      const value = error;
+    const cb = (error, response) => {
+      const value = response;
       const expected = {
-        headers: {},
+        headers: {
+            "Access-Control-Allow-Credentials": true,
+            "Access-Control-Allow-Origin": "*"
+        },
         statusCode: 500,
         isBase64Encoded: false,
         body: "{}"
@@ -24,7 +27,10 @@ describe("handleResponse", () => {
     const cb = (error, response) => {
       const value = response;
       const expected = {
-        headers: {},
+        headers: {
+            "Access-Control-Allow-Credentials": true,
+            "Access-Control-Allow-Origin": "*"
+        },
         statusCode: 200,
         isBase64Encoded: false,
         body: '{"foo":"baz"}'
