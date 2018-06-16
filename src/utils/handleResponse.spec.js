@@ -2,13 +2,12 @@ const chai = require("chai");
 
 const reportError = require("./handleResponse");
 
-describe("reportError", () => {
+describe("handleResponse", () => {
   it("should report error", () => {
     const error = new Error("foo");
     const cb = error => {
-      chai.assert.exists(error);
-      chai.assert.exists(error.data);
-      const value = error.status;
+      const parsedError = JSON.parse(error);
+      const value = parsedError.status;
       const expected = "FAILURE";
       chai.assert.equal(value, expected);
     };

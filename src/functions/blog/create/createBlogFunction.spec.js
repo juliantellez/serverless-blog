@@ -9,10 +9,7 @@ describe("createBlogFunction", () => {
     const repository = {};
     const cb = error => {
       const value = error;
-      const expected = {
-        status: "FAILURE",
-        data: "Blog must have a primary key"
-      };
+      const expected = "Blog must have a primary key";
       chai.assert.deepEqual(value, expected);
     };
 
