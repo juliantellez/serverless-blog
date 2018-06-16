@@ -8,7 +8,8 @@
     "createTable": "sh dynamodb/createTable.sh",
     "test:watch": "npm run test -- --watch",
     "prettier": "prettier --write './src/**/*.js'",
-    "deploy": "serverless deploy -v"
+    "deploy": "serverless deploy -v",
+    "dev": "serverless offline"
   },
   "dependencies": {
     "aws-sdk": "^2.226.1",

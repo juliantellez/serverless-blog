@@ -1,10 +1,6 @@
-const { createRepository } = require("../../../repository/createRepository");
-
-const deleteBlogFunction = (blog, cb) => {
-  const { deleteBlog } = createRepository();
-
+const deleteBlogFunction = (blog, repository, cb) => {
   // TODO: validate schema
-  deleteBlog(blog, cb);
+  repository.deleteBlog(blog, cb);
 };
 
 module.exports = deleteBlogFunction;

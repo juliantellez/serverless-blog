@@ -2,8 +2,7 @@ const { reportfailure, reportSuccess } = require("./createReport");
 
 const handleResponse = cb => (error, data) => {
   if (error) {
-    const errorReport = JSON.stringify(reportfailure(error));
-    cb(errorReport);
+    cb(null, reportfailure(error));
   } else {
     cb(null, reportSuccess(data));
   }
