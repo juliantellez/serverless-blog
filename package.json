@@ -2,7 +2,8 @@
   "name": "serverless-blog",
   "version": "1.0.0",
   "scripts": {
-    "prepush": "npm run prettier",
+    "precommit": "npm run prettier",
+    "prepush": "npm run test",
     "test": "mocha --opts ./mocha.opts",
     "createTable": "sh dynamodb/createTable.sh",
     "test:watch": "npm run test -- --watch",
